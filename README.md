@@ -69,7 +69,7 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           ...
-          new VKAuthPackage()//<---- Add package
+          new OkPackage()//<---- Add package
         );
     }
 ...
@@ -97,20 +97,20 @@ and to `android/app/build.gradle`:
 4. In your `AndroidManifest.xml`, add following line inside `<application>` element:
 ```xml
     <activity
-            android:name="ru.ok.android.sdk.OkAuthActivity"
-            android:configChanges="orientation|screenSize"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+        android:name="ru.ok.android.sdk.OkAuthActivity"
+        android:configChanges="orientation|screenSize"
+        android:launchMode="singleTop">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
 
-                <data
-                    android:host="okYOUR_APP_KEY"
-                    android:scheme="okauth" />
-            </intent-filter>
-        </activity>
+            <data
+                android:host="okYOUR_APP_KEY"
+                android:scheme="okauth" />
+        </intent-filter>
+    </activity>
 ```
 Note: changle in line `android:host="okYOUR_APP_KEY"` to key of your OK app.
 
@@ -235,6 +235,10 @@ class LoginButton extends React.Component {
 
   constructor(){
     this.loginPressed = this.loginPressed.bind(this)
+  }
+
+  componentWillMount() {
+    OkManager.initialize('[appId]', '[appKey]');
   }
 
   loginPressed() {
