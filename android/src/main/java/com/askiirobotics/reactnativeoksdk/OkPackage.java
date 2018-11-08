@@ -1,6 +1,5 @@
 package com.askiirobotics.reactnativeoksdk;
 
-import com.askiirobotics.reactnativeoksdk.OkManagerModule;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
@@ -22,7 +21,6 @@ public class OkPackage implements ReactPackage {
         return modules;
     }
 
-    @Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
