@@ -13,7 +13,8 @@
     "lint": "eslint ./",
     "ci": "npm run lint",
     "build:pods": "cd example/ios; bundle exec pod install; cd -",
-    "publish:maven": "./gradlew clean check uploadArchives"
+    "publish:maven": "./gradlew clean check uploadArchives",
+    "postinstall": "node --experimental-modules ./scripts/postinstall.mjs"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,11 @@
   ],
   "peerDependencies": {
     "react-native": "0.45.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "extract-zip": "^1.6.6",
+    "fs-extra": "^5.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",
@@ -52,5 +58,8 @@
   "bugs": {
     "url": "https://github.com/askiiRobotics/react-native-ok-sdk/issues"
   },
-  "homepage": "https://github.com/askiiRobotics/react-native-ok-sdk#readme"
+  "homepage": "https://github.com/askiiRobotics/react-native-ok-sdk#readme",
+  "engines": {
+    "node" : ">8.11.0"
+  }
 }

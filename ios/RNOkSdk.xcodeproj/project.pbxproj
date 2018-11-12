@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		335165DB2195BAF4008C3EE3 /* OkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 335165D82195B826008C3EE3 /* OkManager.m */; };
-		335166312195C71B008C3EE3 /* OKSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 335166302195C71B008C3EE3 /* OKSDK.m */; };
+		33537B0C219991040038F289 /* OKSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 33537B0B219991040038F289 /* OKSDK.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,8 +27,12 @@
 		134814201AA4EA6300B7C361 /* libRNOkSdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNOkSdk.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		335165D82195B826008C3EE3 /* OkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OkManager.m; sourceTree = "<group>"; };
 		335165DA2195B899008C3EE3 /* OkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OkManager.h; sourceTree = "<group>"; };
-		3351662F2195C71B008C3EE3 /* OKSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKSDK.h; sourceTree = "<group>"; };
-		335166302195C71B008C3EE3 /* OKSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKSDK.m; sourceTree = "<group>"; };
+		33537B06219991040038F289 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		33537B07219991040038F289 /* ok-ios-sdk.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ok-ios-sdk.podspec"; sourceTree = "<group>"; };
+		33537B08219991040038F289 /* OKSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKSDK.h; sourceTree = "<group>"; };
+		33537B09219991040038F289 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		33537B0A219991040038F289 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		33537B0B219991040038F289 /* OKSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKSDK.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,11 +54,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		33537B05219991040038F289 /* ok-ios-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				33537B06219991040038F289 /* LICENSE */,
+				33537B07219991040038F289 /* ok-ios-sdk.podspec */,
+				33537B08219991040038F289 /* OKSDK.h */,
+				33537B09219991040038F289 /* README.md */,
+				33537B0A219991040038F289 /* .gitignore */,
+				33537B0B219991040038F289 /* OKSDK.m */,
+			);
+			path = "ok-ios-sdk";
+			sourceTree = "<group>";
+		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				3351662F2195C71B008C3EE3 /* OKSDK.h */,
-				335166302195C71B008C3EE3 /* OKSDK.m */,
+				33537B05219991040038F289 /* ok-ios-sdk */,
 				335165DA2195B899008C3EE3 /* OkManager.h */,
 				335165D82195B826008C3EE3 /* OkManager.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
@@ -117,8 +133,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33537B0C219991040038F289 /* OKSDK.m in Sources */,
 				335165DB2195BAF4008C3EE3 /* OkManager.m in Sources */,
-				335166312195C71B008C3EE3 /* OKSDK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
