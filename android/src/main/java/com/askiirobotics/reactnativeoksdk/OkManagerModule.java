@@ -31,6 +31,7 @@ public class OkManagerModule extends ReactContextBaseJavaModule implements Activ
     private Odnoklassniki odnoklassniki;
     private String redirectUri;
     private Promise loginPromise;
+    private boolean isInitialized = false;
 
     public OkManagerModule(final ReactApplicationContext reactContext) {
         super(reactContext);
@@ -46,6 +47,7 @@ public class OkManagerModule extends ReactContextBaseJavaModule implements Activ
     public void initialize(final String appId, final String appKey) {
         Log.d(LOG, "Inititalizing app " + appId + " with key " + appKey);
         odnoklassniki = Odnoklassniki.createInstance(getReactApplicationContext(), appId, appKey);
+        isInitialized = true;
         redirectUri = "okauth://ok" + appId;
     }
 
@@ -81,8 +83,10 @@ public class OkManagerModule extends ReactContextBaseJavaModule implements Activ
 
     @Override
     public void onActivityResult(final Activity activity, final int requestCode, final int resultCode, final Intent data) {
-        if (Odnoklassniki.getInstance().isActivityRequestOAuth(requestCode)) {
-            Odnoklassniki.getInstance().onAuthActivityResult(requestCode, resultCode, data, getAuthListener());
+        if (isInitialized) {
+            if (Odnoklassniki.getInstance().isActivityRequestOAuth(requestCode)) {
+                Odnoklassniki.getInstance().onAuthActivityResult(requestCode, resultCode, data, getAuthListener());
+            }
         }
     }
 
