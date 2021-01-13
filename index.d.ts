@@ -1,4 +1,4 @@
-export module "react-native-ok-sdk" {
+declare module "react-native-ok-sdk" {
   export const Scopes = {
     VALUABLE_ACCESS: "VALUABLE_ACCESS",
     SET_STATUS: "SET_STATUS",
@@ -10,7 +10,7 @@ export module "react-native-ok-sdk" {
   };
 
   export default class OkManager {
-    initialize(appId: string, appKey: string);
-    login(permissions: Array<keyof Scopes>);
+    static initialize(appId: string, appKey: string);
+    static login(permissions: Array<keyof Scopes>): Primise<any>;
   }
 }
