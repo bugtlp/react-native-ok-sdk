@@ -1,6 +1,6 @@
 {
   "name": "react-native-ok-sdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "OK SDK support for React Native apps",
   "main": "index.js",
   "scripts": {
@@ -60,6 +60,6 @@
   },
   "homepage": "https://github.com/askiiRobotics/react-native-ok-sdk#readme",
   "engines": {
-    "node" : ">8.11.0"
+    "node": ">8.11.0"
   }
 }

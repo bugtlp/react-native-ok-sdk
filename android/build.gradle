@@ -36,5 +36,5 @@ repositories {
 dependencies {
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile 'com.facebook.react:react-native:+'
-    compile 'ru.ok:odnoklassniki-android-sdk:2.1.6'
+    compile 'ru.ok:odnoklassniki-android-sdk:2.1.8'
 }
